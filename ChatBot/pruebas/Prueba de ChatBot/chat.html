@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Hospital</title>
+    <link rel="stylesheet" href="chatbot.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 id="tituloPrincipal">Chatbot - Hospital</h1>
+    </header>
+
+    <main>
+        <section class="diseño">
+            <div class="ladoIzquierdo">
+                <img id="imagenCelular" src="imagenes/contacto.png" alt="Celular con chat" />
+            </div>
+            
+            
+            <div class="ladoDerecho">
+                <div id="chat-container">
+                    <div id="chat-messages"></div>
+                    
+                    <button id="openMenuButton" class="button-style">Abrir Menú</button>
+                    
+                    <div id="menu" class="hidden">
+                        <button class="menu-option button-style" data-option="1">¿Dónde está el hospital?</button>
+                        <button class="menu-option button-style" data-option="2">¿Cómo puedo sacar un turno?</button>
+                        <button class="menu-option button-style" data-option="3">Horarios de los doctores</button>
+                        <button class="menu-option button-style" data-option="4">Horario de atención</button>
+                        <button class="menu-option button-style" data-option="5">Obras sociales</button>
+                        <button id="helpButton" class="button-style">Ayuda</button>
+                    </div>
+
+                    <button id="endConversationButton" class="hidden button-style">Fin de la Conversación</button>
+                </div>
+            </div>
+            <button id="botonChat">
+                <a href="index.html">Preguntas Frecuentes </a>
+            </button>
+        </section>  
+    </main>  
+    <script src="script.js"></script>
+</body>
+</html>
