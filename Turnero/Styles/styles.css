@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    height: 100%;
+    flex-direction: column;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.turnero-box {
+    background-color: #5d8aa8;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px; /* Ancho máximo para grandes pantallas */
+    text-align: center;
+    margin: 20px;
+}
+
+.turnero-box h2 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.turnero-box input {
+    width: 100%;
+    max-width: 400px;
+    height: 40px;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #eaeaea;
+}
+
+.turnero-box button {
+    background-color: #3b5998;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.turnero-box button:hover {
+    background-color: #2d4373;
+}
+
+/* Responsive Design para pantallas pequeñas */
+@media (max-width: 768px) {
+    .turnero-box {
+        width: 90%;
+    }
+
+    .turnero-box h2 {
+        font-size: 24px;
+    }
+
+    .turnero-box input, .turnero-box button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .turnero-box {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .turnero-box h2 {
+        font-size: 20px;
+    }
+}
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 150px; 
+}
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+        margin-top: 80px; 
+    }
+}
