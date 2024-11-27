@@ -8,9 +8,10 @@ footer {
     justify-content: space-around;
 }
 
-#TituloFooter   {
+#TituloFooter {
     font-size: 100%;
 }
+
 .footer-contact {
     text-align: left;
     max-width: 300px;
@@ -46,12 +47,39 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.footer-contact-button button:hover {
+    background-color: #28567B;
+}
+
+.footer-contact-button .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacio entre los íconos */
 }
 
 .footer-contact-button .social-icons a {
     color: white;
-    margin: 0 10px;
-    font-size: 20px;
+    font-size: 24px; /* Tamaño del ícono */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Hacerlos circulares */
+    background-color: #1E3B5A; /* Fondo para que destaquen */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.footer-contact-button .social-icons a:hover {
+    background-color: #28567B; /* Color de fondo al pasar el mouse */
+}
+
+.footer-contact-button .social-icons a i {
+    margin: 0;
 }
 
 .footer-bottom {
