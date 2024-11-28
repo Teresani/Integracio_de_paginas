@@ -46,16 +46,20 @@
                 </div>
             </div>
         </nav>
-        <!-- Botones separados debajo del nav -->
+    
+        <!-- Botones debajo del nav -->
         <div class="BotonesNavbar">
             <button><a href="turnero.html">TURNERO</a></button>
             <button><a href="preguntasFrecuentes.html">CHATBOT</a></button>
-            <button><a href="Login.html">PORTAL</a></button>
+            <button><a href="paginaEnProceso.html">PORTAL</a></button>
         </div>
     </header>
+    
+    <!-- El contenido de tu página sigue aquí... -->
+    
     <br>
     <br>
-    <main>
+    <main class="main-content">
         <section class="diseño">
             <div class="ladoIzquierdo">
                 <img id="imagenCelular" src="Img/IMG Chatbot/Sin_título-removebg-preview.png" alt="Celular con chat" />
@@ -75,15 +79,20 @@
                         <button class="menu-option button-style" data-option="5">Obras sociales</button>
                         <button id="helpButton" class="button-style">Ayuda</button>
                     </div>
-
+    
                     <button id="endConversationButton" class="hidden button-style">Fin de la Conversación</button>
                 </div>
             </div>
-            <button id="botonChat">
-                <a href="index.html">Preguntas Frecuentes </a>
-            </button>
+            <center>
+                <button class="preguntas-btn">
+                    <a href="preguntasFrecuentes.html">Preguntas Frecuentes</a>
+                </button>
+            </center>
+            
+            
         </section>  
-    </main>  
+    </main>
+    
     <script src="Scripts/Script_Chatbot/script.js"></script>
 </body>
 </html>

@@ -1,122 +1,232 @@
-* { 
+/* Estilo general del body para agregar espacio debajo del header */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: #e0f7fa; /* Fondo suave para el cuerpo */
 }
 
-body {
-    background-image: url(imgs/pagina\ web.png);
-    font-family: 'Poppins', sans-serif;
-    background-color: #2570d1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Para que todo se acomode debajo del header */
-    height: 100vh;
-    flex-direction: column; /* Asegura que el contenido fluya verticalmente */
+/* Ajuste de espacio para que el contenido no interfiera con el header */
+.main-content {
+    padding-top: 120px; /* Esto crea un espacio entre el contenido y el header fijo */
 }
 
-#tituloPrincipal {
-    color: #003851;
-    font-size: 40px;
-    font-weight: 700;
-}
-
-#chat-container {
-    margin-top: 80px; /* Para que el chat no quede pegado al header */
-    margin: 20px;
-    padding: 20px;
-    width: 350px;
-    max-height: 500px;
-    overflow-y: auto;
+/* Estilo del menú */
+#menu {
+    display: none;
+    position: fixed;
+    top: 70%; /* Ajustamos la posición para que no colisione con el header */
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    width: 400px;
+    text-align: center;
+    max-height: 80%;
+    overflow-y: auto;
+    border: 2px solid #00796b;
 }
 
-.button-style {
+#menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    z-index: -1;
+}
+
+/* Estilo del botón para abrir el menú */
+#openMenuButton {
     display: block;
     width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    font-size: 16px;
-    color: #fff;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 18px;
     background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#openMenuButton:hover {
+    background-color: #004d40;
+}
+
+/* Mejoras en las opciones del menú */
+.menu-option {
+    display: block;
+    margin: 15px 0;
+    padding: 16px;
+    font-size: 18px;
+    color: #00796b;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-option:hover {
+    background-color: #00796b;
+    color: white;
+}
+
+/* Aseguramos que el botón de fin de conversación también sea visible */
+#endConversationButton {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 18px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#endConversationButton:hover {
+    background-color: #d32f2f;
+}
+
+/* Mejoras en la apariencia del chat */
+#chat-messages {
+    padding: 20px;
+    max-height: 450px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Estilo de los mensajes */
+.message-bubble {
+    margin-bottom: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #00796b;
+    color: white;
+    align-self: flex-start;
+}
+
+.bot-message {
+    background-color: #f4f4f4;
+    color: #00796b;
+    align-self: flex-end;
+}
+
+/* Estilo para los botones debajo del nav */
+.BotonesNavbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 80px; /* Añadimos espacio para que no se superpongan con el header */
+}
+
+.BotonesNavbar button {
+    padding: 12px 20px;
+    background-color: #00796b;
+    color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.button-style:hover {
+.BotonesNavbar button:hover {
     background-color: #004d40;
 }
 
-#chat-messages {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.message-bubble {
-    max-width: 80%;
-    padding: 10px;
-    border-radius: 15px;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.user-message {
-    align-self: flex-end;
-    background-color: #d1e7dd;
-    color: #00574b;
-    border-top-right-radius: 0;
-}
-
-.bot-message {
-    align-self: flex-start;
-    background-color: #e8eaf6;
-    color: #1a237e;
-    border-top-left-radius: 0;
-}
-
-#imagenCelular {
-    display: block;
-    margin: auto;
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-}
-
-.ladoIzquierdo {
-    display: contents; 
-}
-
-.hidden {
-    display: none;
-}
-
-#menu {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column; /* Asegura que los botones estén en columna */
-    justify-content: center;
-    align-items: center; /* Centra los botones dentro del menú */
-    gap: 10px; /* Espaciado entre los botones */
-}
-
-button {
-    display: flex;
-    margin: auto;
-    border-radius: 10px;
-    text-align: center;
-    background-color: #C4C6C6;
-    padding: 8px 16px;
-    font-size: 17px;
-}
-
-button a {
+.BotonesNavbar a {
     text-decoration: none;
-    color: #003851;
-    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* Estilo responsive: mejor disposición en móviles */
+@media (max-width: 767px) {
+    .main-content {
+        padding-top: 130px; /* Aumentamos el padding en móviles */
+    }
+
+    #menu {
+        width: 80%;
+        padding: 20px;
+    }
+
+    #openMenuButton {
+        font-size: 18px;
+    }
+
+    .menu-option {
+        font-size: 16px;
+    }
+
+    .BotonesNavbar {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 100px; /* Más espacio para dispositivos móviles */
+    }
+
+    .BotonesNavbar button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+/* Estilo general para los botones */
+.preguntas-btn {
+    padding: 12px 24px;
+    background-color: #00796b; /* Fondo verde atractivo */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase; /* Texto en mayúsculas para más claridad */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-block; /* Asegura que los botones no se apilen */
+    margin: 10px;
+}
+
+/* Estilo del enlace dentro del botón */
+.preguntas-btn a {
+    text-decoration: none;
+    color: white; /* El texto del enlace será blanco */
+}
+
+/* Efecto cuando el cursor pasa sobre el botón */
+.preguntas-btn:hover {
+    background-color: #004d40; /* Fondo más oscuro cuando se pasa el cursor */
+    transform: translateY(-3px); /* Botón se eleva ligeramente */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más profunda al hacer hover */
+}
+
+/* Efecto de presionar el botón */
+.preguntas-btn:active {
+    transform: translateY(1px); /* Efecto de "presionar" el botón */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Menos sombra cuando el botón está presionado */
 }

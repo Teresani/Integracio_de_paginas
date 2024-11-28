@@ -3,6 +3,9 @@
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Header fijo */
@@ -25,9 +28,9 @@ header {
     border: none;
     background: none;
 }
-
+Img_Header/IconoMenu.png
 .navbar-toggler-icon {
-    background-image: url('Pagina\Img\Header\IconoMenu.png');
+    background-image: url('Img_Header/IconoMenu.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 30px;
@@ -45,6 +48,7 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap; /* Evita que los elementos se muevan a la siguiente línea */
+    padding: 10px;
 }
 
 /* Grupo de entrada */
@@ -68,6 +72,7 @@ header {
     border-radius: 20px;
     border: 6px solid #094797;
     height: 40px;
+    width: 100%;
 }
 
 /* Icono dentro del input */
@@ -100,6 +105,7 @@ header {
     justify-content: space-between;
     background-color: #003851;
     padding: 10px 50px;
+    margin-top: 10px;
 }
 
 .BotonesNavbar button {
@@ -130,35 +136,41 @@ body {
 
 /* Diseño Responsivo */
 @media (max-width: 992px) {
-    .search-form {
-        width: 100%;
-        margin-bottom: 1rem;
-        display: flex;
-        flex-wrap: nowrap;
-    }
-
+    /* Navbar: en pantallas medianas */
     .navbar-collapse {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        flex-wrap: nowrap;
+        width: 100%;
     }
 
-    .input-group {
-        width: 70%;
-        margin-bottom: 0;
-        flex-wrap: nowrap;
-    }
-
+    /* Botón hamburguesa y elementos del navbar */
     .navbar-nav {
+        width: 100%;
         display: flex;
-        align-items: center;
+        justify-content: center;
+    }
+
+    /* Ajustar el tamaño de la barra de búsqueda */
+    .input-group {
+        width: 80%; /* Mayor tamaño para pantallas medianas */
+        margin-bottom: 15px;
+    }
+
+    .search-form {
+        width: 100%;
+        margin-top: 10px;
     }
 
     .btn-transparent {
         margin-bottom: 20px;
-        margin-left: 10px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .navbar-brand img {
+        height: 60px; /* Reducción del logo */
     }
 }
 
@@ -175,5 +187,36 @@ main {
 
     main {
         margin-top: 160px; /* Asegurar que el contenido no se solape en pantallas pequeñas */
+    }
+
+    .navbar-brand img {
+        height: 50px; /* Reducción del logo en móviles pequeños */
+    }
+
+    .BotonesNavbar {
+        padding: 10px 20px;
+        flex-direction: column; /* Botones apilados en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .BotonesNavbar button {
+        margin: 10px 0;
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .search-form {
+        margin-top: 10px;
+        width: 90%; /* Ajustar el tamaño de la barra de búsqueda */
+    }
+
+    .input-group {
+        width: 100%; /* Mayor ancho para móviles */
+    }
+
+    /* Diseño mejorado de la hamburguesa en pantallas móviles */
+    .navbar-toggler-icon {
+        width: 40px;
+        height: 40px;
     }
 }
