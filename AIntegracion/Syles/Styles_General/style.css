@@ -1,162 +1,251 @@
-/* Estilos generales (mobile first) */
-body {
-    font-family: Arial, sans-serif;
+/* Estilos generales */
+*,
+*::before,
+*::after {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Garantiza que padding y border no afecten el tamaño del elemento */
 }
 
-/* Header */
+/* Fondo de gradiente */
+body {
+    background: linear-gradient(to bottom, #003851, #bfd2d9); /* Gradiente */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Fijo al hacer scroll */
+    margin-top: 120px; /* Espacio para el header fijo */
+    margin-right: 0; /* Eliminar márgenes adicionales */
+}
+
+/* Header fijo */
 header {
-    padding: 10px 20px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    background-color: rgba(191, 210, 217, 0.8); /* Fondo semitransparente */
+    margin-bottom: 10px; /* Evitar solapamiento con el contenido */
+}
+
+/* Navbar */
+.custom-navbar {
+    background-color: rgba(191, 210, 217, 0.8); /* Fondo semitransparente */
+}
+
+/* Icono de menú */
+.navbar-toggler {
+    border: none;
+    background: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url('Img_Header/IconoMenu.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+/* Marca (logo) */
+.navbar-brand img {
+    height: 80px;
+    transition: height 0.3s ease;
+}
+
+/* Formulario de búsqueda */
+.search-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 10px;
+}
+
+/* Grupo de entrada */
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    overflow: visible;
+    border-radius: 20px;
+    flex-wrap: nowrap;
+}
+
+.relative-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Entrada de búsqueda */
+.search-input {
+    padding-left: 40px;
+    border-radius: 20px;
+    border: 6px solid #094797;
+    height: 40px;
+    width: 100%;
+}
+
+/* Icono dentro del input */
+.input-group-text {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    z-index: 1;
+}
+
+/* Botón transparente */
+.btn-transparent {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.btn-transparent img {
+    height: 40px;
+    margin-left: 5px;
+}
+
+/* Botones Navbar */
+.BotonesNavbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: #333;
-    color: #fff;
-}
-
-.navbar-brand img {
-    width: 150px; /* Logo ajustable */
+    background-color: #003851;
+    padding: 10px 50px;
+    margin-top: 10px;
 }
 
 .BotonesNavbar button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 14px;
-    background-color: #444;
+    background-color: #003851;
     color: white;
     border: none;
+    padding: 10px 20px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-.BotonesNavbar button:hover {
-    background-color: #555;
+.BotonesNavbar a {
+    color: white;
+    text-decoration: none;
 }
 
-/* Main */
+.BotonesNavbar button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* Espacio debajo del header */
+body {
+    margin-top: 120px;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 992px) {
+    /* Navbar en pantallas medianas */
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Ajustar el tamaño de la barra de búsqueda */
+    .input-group {
+        width: 80%; /* Mayor tamaño para pantallas medianas */
+        margin-bottom: 15px;
+    }
+
+    .search-form {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn-transparent {
+        margin-bottom: 20px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .navbar-brand img {
+        height: 60px; /* Reducción del logo */
+    }
+}
+
+/* Sección de contenido principal debajo del header */
 main {
+    margin-top: 150px; /* Añadir espacio debajo del header para dispositivos grandes */
+}
+
+/* Footer */
+footer {
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    background-color: #003851;
+    color: white;
+    text-align: center;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    bottom: 0;
+    margin: 0;
 }
 
-.main-section {
-    width: 100%;
-    max-width: 500px;
-    margin: 10px 0;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
+/* Eliminar márgenes y padding adicionales en footer */
+footer * {
+    margin: 0;
+    padding: 0;
 }
 
-.main-section img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Media query para dispositivos con pantallas de al menos 600px (tabletas y teléfonos grandes) */
-@media screen and (min-width: 600px) {
-
-    /* Ajustar la visualización de botones de navegación */
-    .BotonesNavbar button {
-        font-size: 16px; /* Botones más grandes en pantallas medianas */
+/* Para dispositivos móviles pequeños */
+@media (max-width: 480px) {
+    body {
+        margin-top: 150px; /* Evitar solapamiento con el header */
     }
 
-    /* Ajustar el header */
-    header {
-        padding: 15px 30px;
+    main {
+        margin-top: 160px; /* Asegurar que el contenido no se solape en pantallas pequeñas */
     }
 
     .navbar-brand img {
-        width: 180px;
+        height: 50px; /* Reducción del logo en móviles pequeños */
     }
 
-    /* Ajustar el main */
-    main {
-        padding: 30px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-start;
-    }
-
-    .main-section {
-        width: 48%; /* Dos secciones por fila */
-        margin: 10px;
-    }
-
-    /* Ajuste para imágenes dentro del main */
-    .main-section img {
-        width: 100%;
-    }
-}
-
-/* Media query para pantallas más grandes (PC, de 1024px en adelante) */
-@media screen and (min-width: 1024px) {
-
-    /* Header ajustado para pantallas grandes */
-    header {
-        padding: 20px 40px;
-        justify-content: space-between;
-    }
-
-    .navbar-brand img {
-        width: 200px; /* Logo más grande */
-    }
-
-    /* Botones de navegación más grandes en pantallas grandes */
-    .BotonesNavbar button {
-        font-size: 18px;
-        padding: 12px 24px;
-    }
-
-    /* Main */
-    main {
-        padding: 50px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .main-section {
-        width: 30%; /* Tres secciones por fila */
-        margin: 20px;
-    }
-
-    /* Ajuste de imágenes dentro del main */
-    .main-section img {
-        width: 100%;
-    }
-}
-
-/* Ajustes especiales para pantallas de muy alta resolución (por ejemplo, monitores 4K) */
-@media screen and (min-width: 1440px) {
-
-    /* Ajustar más el header */
-    header {
-        padding: 30px 50px;
-    }
-
-    .navbar-brand img {
-        width: 220px;
-    }
-
-    /* Ajustar el main */
-    main {
-        padding: 60px;
-    }
-
-    .main-section {
-        width: 22%; /* Cuatro secciones por fila */
+    .BotonesNavbar {
+        padding: 10px 20px;
+        flex-direction: column; /* Botones apilados en pantallas pequeñas */
+        align-items: center;
     }
 
     .BotonesNavbar button {
-        font-size: 20px;
-        padding: 14px 28px;
+        margin: 10px 0;
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .search-form {
+        margin-top: 10px;
+        width: 90%; /* Ajustar el tamaño de la barra de búsqueda */
+    }
+
+    .input-group {
+        width: 100%; /* Mayor ancho para móviles */
+    }
+
+    .navbar-toggler-icon {
+        width: 40px;
+        height: 40px;
     }
 }
