@@ -1,4 +1,4 @@
-/* General Reset */
+/* Estilo General */
 * {
     margin: 0;
     padding: 0;
@@ -7,11 +7,11 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url('imgs/pagina web.png');
-    background-color: #2570d1;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background: linear-gradient(45deg, #4c6ef5, #2c3e50); /* Fondo degradado */
+    color: #fff;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Header */
@@ -21,119 +21,194 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-    background: #fff;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+    animation: slideDown 0.5s ease-out;
 }
 
+/* Animación para el header */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navbar */
 .navbar {
+    padding: 10px 0;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+}
+
+.navbar-toggler-icon {
+    background-color: #003851;
+}
+
+.navbar-nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-end;
 }
 
-.navbar a {
-    text-decoration: none;
-    font-weight: 700;
-    color: #003851;
+.navbar-nav .nav-item {
+    margin-left: 15px;
 }
 
-.navbar .search-form {
+.search-form {
+    margin-right: 10px;
     position: relative;
 }
 
-.navbar .search-form input {
-    width: 200px;
-    padding: 5px 10px;
+.search-input {
     border-radius: 20px;
-    border: 1px solid #ccc;
+    padding: 8px 12px;
+    width: 220px;
 }
 
-/* Main Content */
-main {
-    flex: 1; /* Permite que el contenido ocupe todo el espacio disponible */
-    margin-top: 70px; /* Asegura espacio para el header fijo */
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilos de los botones */
+.BotonesNavbar {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    margin-top: 20px;
 }
 
-#imagenCelular {
-    max-width: 250px;
-    height: auto;
+.BotonesNavbar button {
+    background-color: #2570d1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+.BotonesNavbar button:hover {
+    background-color: #003851;
+}
+
+/* Tarjetas */
 .cuadricula {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
-    width: 100%;
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
 }
 
 .tarjeta {
     perspective: 1000px;
-    width: 150px;
-    height: 200px;
-    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
 }
 
 .tarjeta .frente,
 .tarjeta .reverso {
-    position: absolute;
-    backface-visibility: hidden;
     width: 100%;
-    height: 100%;
+    height: 200px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
-    transition: transform 0.6s ease;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #003851;
+    transition: transform 0.6s;
 }
 
 .tarjeta .frente {
-    background: #c4c6c6;
+    background-color: #2570d1;
+    color: #fff;
     font-weight: bold;
-    font-size: 16px;
-    color: #003851;
 }
 
 .tarjeta .reverso {
+    background-color: #fff;
     transform: rotateY(180deg);
-    background: #003851;
-    color: #fff;
-}
-
-.tarjeta:hover .frente {
-    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
 }
 
 .tarjeta:hover .reverso {
     transform: rotateY(0);
 }
 
-/* Footer */
-footer {
-    width: 100%;
-    background-color: #003851;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    margin-top: auto; /* Hace que el footer se mantenga al final incluso con poco contenido */
+/* Animación para las tarjetas */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.footer-contact,
-.footer-numbers,
-.footer-bottom {
-    margin-bottom: 10px;
+/* Botón Chatbot */
+#botonChat {
+    background-color: #003851;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#botonChat:hover {
+    background-color: #2570d1;
+}
+
+/* Footer */
+footer {
+    background-color: #003851;
+    padding: 30px 20px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
 }
 
 .footer-contact h1 {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .footer-numbers .number {
-    margin: 5px 0;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .cuadricula {
+        grid-template-columns: 1fr;
+    }
+
+    .BotonesNavbar {
+        flex-direction: column;
+    }
 }
