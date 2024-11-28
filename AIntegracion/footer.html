@@ -33,15 +33,15 @@
         </div>
     
         <div class="footer-contact-button">
-            <button>Contacto y Servicio</button>
+            <button id="ContactoBoton">Contacto y Servicio</button>
             <div class="social-icons">
-                <a href="#" class="social-icon">
+                <a href="paginaEnProceso.html" class="social-icon">
                     <img src="footer/Img Footer/faceLogo.png" alt="Facebook" />
                 </a>
-                <a href="#" class="social-icon">
+                <a href="paginaEnProceso.html" class="social-icon">
                     <img src="footer/Img Footer/Twitter-Logo.png" alt="Twitter" />
                 </a>
-                <a href="#" class="social-icon">
+                <a href="paginaEnProceso.html" class="social-icon">
                     <img src="footer/Img Footer/instaLogo.png" alt="Instagram" />
                 </a>
             </div>
@@ -54,5 +54,16 @@
             <img src="Img/logo_proa.png" alt="Programa Logo">
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Botón de iniciar sesión
+            const boton = document.querySelector("#ContactoBoton");
+            if (boton) {
+                boton.addEventListener("click", () => {
+                    window.location.href = "paginaEnProceso.html";
+                });
+            }
+        });
+    </script>
 </body>
 </html>

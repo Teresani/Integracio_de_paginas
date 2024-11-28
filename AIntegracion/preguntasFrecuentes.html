@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carta de Pregunta y Respuesta</title>
     <script src="haha.js"></script>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="Syles/Styles_Chatbot/Style.css">
+    <link rel="stylesheet" href="footer/footer.css"> <!-- Esto Es Del Footer-->
     <link rel="stylesheet" href="header/header.css"> <!-- Esto Es Del Header-->
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -51,7 +52,7 @@
         <div class="BotonesNavbar">
             <button><a href="turnero.html">TURNERO</a></button>
             <button><a href="preguntasFrecuentes.html">CHATBOT</a></button>
-            <button><a href="Login.html">PORTAL</a></button>
+            <button><a href="paginaEnProceso.html">PORTAL</a></button>
         </div>
     </header>
 
@@ -93,6 +94,66 @@
             </div>
         </section>  
     </main>  
+
+    <footer><!-- Digamos que este footer ya esta bastante bien :)-->
+        <div class="footer-contact">
+            <h1 id="TituloFooter">Hospital Municipal La Falda</h1>
+            <p>13 de Diciembre 596, La Falda<br>Córdoba, Argentina</p>
+        </div>
+    
+        <div class="footer-numbers">
+            <div class="number">
+                <span>📞 103</span>
+                <p>Seguridad</p>
+            </div>
+            <div class="number">
+                <span>📞 107</span>
+                <p>Emergencias</p>
+            </div>
+            <div class="number">
+                <span>📞 100</span>
+                <p>Bomberos</p>
+            </div>
+            <div class="number">
+                <span>📞 101</span>
+                <p>Policía</p>
+            </div>
+        </div>
+    
+        <div class="footer-contact-button">
+            <button id="ContactoBoton">Contacto y Servicio</button>
+            <div class="social-icons">
+                <a href="paginaEnProceso.html" class="social-icon">
+                    <img src="footer/Img Footer/faceLogo.png" alt="Facebook" />
+                </a>
+                <a href="paginaEnProceso.html" class="social-icon">
+                    <img src="footer/Img Footer/Twitter-Logo.png" alt="Twitter" />
+                </a>
+                <a href="paginaEnProceso.html" class="social-icon">
+                    <img src="footer/Img Footer/instaLogo.png" alt="Instagram" />
+                </a>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <img src="footer/Img Footer/LogoJefaturaGabinete.png" alt="La Falda Logo">
+            <p>Creado por 5to año PRoA La Falda - © 2024</p>
+            <img src="footer/Img Footer/LOGO-LA-FALDA.png" alt="Logo La falda">
+            <img src="Img/logo_proa.png" alt="Programa Logo">
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Botón de iniciar sesión
+            const boton = document.querySelector("#ContactoBoton");
+            if (boton) {
+                boton.addEventListener("click", () => {
+                    window.location.href = "paginaEnProceso.html";
+                });
+            }
+        });
+    </script>
+
     <script type="text/javascript">(function () { var ldk = document.createElement('script'); ldk.type = 'text/javascript'; ldk.async = true; ldk.src = 'https://s.cliengo.com/weboptimizer/667ac7d2926bf5278bce2f30/667ac7d4926bf5278bce2f33.js?platform=view_installation_code'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s); })();</script>
 </body>
 </html>
