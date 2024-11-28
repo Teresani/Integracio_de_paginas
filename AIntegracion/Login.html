@@ -10,7 +10,6 @@
 </head>
 <body>
 
-
     <div class="contenedor-formularios">
 
         <ul class="contenedor-tabs">
@@ -18,39 +17,37 @@
             <li class="tab tab-primera"><a href="Register.html">Registrarse</a></li>
         </ul>
 
-
         <div class="contenido-tab">
 
             <div id="iniciar-sesion">
                 <h1>Iniciar Sesión</h1>
-                <form action="#" method="post">
+                <form>
                     <div class="contenedor-input">
                         <label>
                             <span class="req"></span>
                         </label>
-                        <input type="text" required placeholder= "* Usuario" >
+                        <input type="text" required placeholder="* Usuario">
                     </div>
-
+                
                     <div class="contenedor-input">
                         <label>
                             <span class="req"></span>
                         </label>
-                        <input type="password" required placeholder= "* Contraseña">
+                        <input type="password" required placeholder="* Contraseña">
                     </div>
-                    <p class="forgot"><a href="#">Se te olvidó la contraseña?</a></p>
-                    <input type="submit" class="button button-block" value="Iniciar Sesión">
+                    <p class="forgot"><a href="paginaEnProceso.html">¿Se te olvidó la contraseña?</a></p>
+                    <button type="button" id="loginButton" class="button button-block">Iniciar Sesión</button>
                 </form>
             </div>
 
-           
             <div id="#registrarse">
                 <h1>Registrarse</h1>
-                <form action="#" method="post">
+                <form>
                     <div class="fila-arriba">
                         <div class="contenedor-input">
                             <input type="text" required placeholder="* Nombre">
                         </div>
-
+                
                         <div class="contenedor-input">
                             <input type="text" required placeholder="* Apellido">
                         </div>
@@ -64,19 +61,36 @@
                     <div class="contenedor-input">
                         <input type="password" required placeholder="* Contraseña">
                     </div>
-
+                
                     <div class="contenedor-input">
                         <input type="password" required placeholder="Verificación Contraseña">
                     </div>
-
-                    <input type="submit" class="button button-block" value="Registrarse">
-                </form>
+                
+                    <button type="button" id="registerButton" class="button button-block">Registrarse</button>
+                </form>                
             </div>
         </div>
     </div>
 
-   
-   <script src="carrusel.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Botón de iniciar sesión
+            const loginButton = document.querySelector("#loginButton");
+            if (loginButton) {
+                loginButton.addEventListener("click", () => {
+                    window.location.href = "index.html";
+                });
+            }
+
+            // Botón de registrarse
+            const registerButton = document.querySelector("#registerButton");
+            if (registerButton) {
+                registerButton.addEventListener("click", () => {
+                    window.location.href = "index.html";
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
