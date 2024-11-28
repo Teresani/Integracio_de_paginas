@@ -1,39 +1,50 @@
+/* Estilos generales */
+AIntegracion\Img\IMG Turnero\fondito.webp
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #f3f3f3;
-    height: 100%;
+    align-items: flex-start;
+    background-color: #642e2e; /* Fondo claro */
+    background-size: cover; /* Asegura que el fondo cubra toda la pantalla */
+    background-position: center;
+    background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
+    height: 100vh; /* Asegura que el body ocupe todo el alto */
     flex-direction: column;
 }
 
+/* Main */
 main {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    margin-top: 120px; /* Espacio debajo del header */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
 }
 
+/* Caja principal de turnero */
 .turnero-box {
-    background-color: #5d8aa8;
+    background-color: rgba(93, 138, 168, 0.9); /* Fondo más oscuro para contraste */
     padding: 35px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 500px; /* Ancho máximo para grandes pantallas */
+    max-width: 500px;
     text-align: center;
     margin: 20px;
 }
 
+/* Titulo */
 .turnero-box h2 {
     font-size: 30px;
     color: white;
     margin-bottom: 20px;
 }
 
+/* Entrada de texto */
 .turnero-box input {
     width: 100%;
     max-width: 400px;
@@ -43,8 +54,10 @@ main {
     border: none;
     border-radius: 5px;
     background-color: #eaeaea;
+    font-size: 14px;
 }
 
+/* Botón */
 .turnero-box button {
     background-color: #3b5998;
     color: white;
@@ -64,8 +77,13 @@ main {
     background-color: #2d4373;
 }
 
-/* Responsive Design para pantallas pequeñas */
+/* Diseño Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
+    main {
+        padding: 10px;
+        margin-top: 100px; /* Menos espacio superior en pantallas más pequeñas */
+    }
+
     .turnero-box {
         width: 90%;
     }
@@ -88,18 +106,14 @@ main {
     .turnero-box h2 {
         font-size: 20px;
     }
-}
-main {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin-top: 150px; 
-}
-@media (max-width: 768px) {
-    main {
-        padding: 10px;
-        margin-top: 80px; 
+
+    .turnero-box input, .turnero-box button {
+        font-size: 14px;
     }
+}
+
+/* Ajustes adicionales */
+.turnero-box input:focus, .turnero-box button:focus {
+    outline: none;
+    border: 2px solid #094797; /* Resalta el borde cuando el elemento tiene foco */
 }

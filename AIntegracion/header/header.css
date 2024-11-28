@@ -1,24 +1,31 @@
-*   {
+/* Estilos generales */
+* {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
 
-header  {
+/* Header fijo */
+header {
     top: 0;
     position: fixed;
     width: 100%;
     z-index: 3;
+    background-color: #bfd2d9; /* Color del header */
+    padding: 10px 0; /* Ajusta el padding del header si es necesario */
 }
+
+/* Navbar */
 .custom-navbar {
     background-color: #bfd2d9; /* Color del header */
 }
 
+/* Icono de menú */
 .navbar-toggler {
     border: none;
     background: none;
 }
-Pagina\Img\Header\IconoMenu.png
+
 .navbar-toggler-icon {
     background-image: url('Pagina\Img\Header\IconoMenu.png');
     background-size: contain;
@@ -27,10 +34,12 @@ Pagina\Img\Header\IconoMenu.png
     height: 30px;
 }
 
+/* Marca */
 .navbar-brand img {
     height: 80px;
 }
 
+/* Formulario de búsqueda */
 .search-form {
     width: 100%;
     display: flex;
@@ -38,13 +47,14 @@ Pagina\Img\Header\IconoMenu.png
     flex-wrap: nowrap; /* Evita que los elementos se muevan a la siguiente línea */
 }
 
+/* Grupo de entrada */
 .input-group {
     display: flex;
-    align-items: center; /* Alinea verticalmente los elementos dentro del input-group */
+    align-items: center;
     width: 70%;
     overflow: visible;
     border-radius: 20px;
-    flex-wrap: nowrap; /* Evita que los elementos se muevan a la siguiente línea */
+    flex-wrap: nowrap;
 }
 
 .relative-container {
@@ -52,16 +62,18 @@ Pagina\Img\Header\IconoMenu.png
     width: 100%;
 }
 
+/* Entrada de búsqueda */
 .search-input {
-    padding-left: 40px; /* Ajusta según sea necesario */
+    padding-left: 40px;
     border-radius: 20px;
     border: 6px solid #094797;
-    height: 40px; /* Ajusta según sea necesario */
+    height: 40px;
 }
 
+/* Icono dentro del input */
 .input-group-text {
     position: absolute;
-    left: 10px; /* Ajusta según sea necesario */
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
     background: transparent;
@@ -69,6 +81,7 @@ Pagina\Img\Header\IconoMenu.png
     z-index: 1;
 }
 
+/* Botón transparente */
 .btn-transparent {
     background: transparent;
     border: none;
@@ -78,59 +91,64 @@ Pagina\Img\Header\IconoMenu.png
 
 .btn-transparent img {
     height: 40px;
-    margin-left: 5px; /* Mueve la imagen a la derecha del texto */
+    margin-left: 5px;
 }
+
 /* Botones Navbar */
 .BotonesNavbar {
     display: flex;
-    justify-content: space-between; /* Distribuir los botones uniformemente */
-    background-color: #003851; /* Color de fondo de la barra */
-    padding: 10px 50px; /* Ajusta el padding a tu gusto */
+    justify-content: space-between;
+    background-color: #003851;
+    padding: 10px 50px;
 }
 
 .BotonesNavbar button {
-    background-color: #003851; /* Color del botón */
-    color: white; /* Texto blanco */
-    border: none; /* Quita los bordes */
-    padding: 10px 20px; /* Ajusta el tamaño del botón */
+    background-color: #003851;
+    color: white;
+    border: none;
+    padding: 10px 20px;
     cursor: pointer;
-    font-size: 16px; /* Tamaño de la fuente */
+    font-size: 16px;
 }
 
-
 .BotonesNavbar a {
-    color: white; /* Mantén el texto del link blanco */
-    text-decoration: none; /* Quitar el subrayado del enlace */
+    color: white;
+    text-decoration: none;
 }
 
 .BotonesNavbar button a {
     display: block;
-    width: 100%; /* Hacer que el link ocupe todo el botón */
+    width: 100%;
     height: 100%;
-    text-align: center; /* Centrar el texto en el botón */
+    text-align: center;
 }
 
+/* Agregar una gran separación debajo del header */
+body {
+    margin-top: 120px; /* Aumenta el margen para evitar solapamiento */
+}
 
+/* Diseño Responsivo */
 @media (max-width: 992px) {
     .search-form {
         width: 100%;
         margin-bottom: 1rem;
         display: flex;
-        flex-wrap: nowrap; /* Asegura que los elementos se mantengan en una línea */
+        flex-wrap: nowrap;
     }
 
     .navbar-collapse {
         display: flex;
-        flex-direction: row; /* Cambia la dirección del contenido colapsado a una fila */
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: nowrap; /* Evita que los elementos se muevan a la siguiente línea */
+        flex-wrap: nowrap;
     }
 
     .input-group {
         width: 70%;
         margin-bottom: 0;
-        flex-wrap: nowrap; /* Evita que los elementos se muevan a la siguiente línea */
+        flex-wrap: nowrap;
     }
 
     .navbar-nav {
@@ -140,6 +158,22 @@ Pagina\Img\Header\IconoMenu.png
 
     .btn-transparent {
         margin-bottom: 20px;
-        margin-left: 10px; /* Ajusta el espaciado en dispositivos pequeños */
+        margin-left: 10px;
+    }
+}
+
+/* Sección de contenido principal debajo del header */
+main {
+    margin-top: 150px; /* Añadir un gran espacio debajo del header para dispositivos grandes */
+}
+
+/* Para dispositivos móviles pequeños */
+@media (max-width: 480px) {
+    body {
+        margin-top: 150px; /* Espacio de 150px o más para móviles pequeños */
+    }
+
+    main {
+        margin-top: 160px; /* Asegurar que el contenido no se solape en pantallas pequeñas */
     }
 }
