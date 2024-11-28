@@ -12,7 +12,7 @@ header {
     width: 100%;
     z-index: 3;
     background-color: #bfd2d9; /* Color del header */
-    padding: 10px 0; /* Ajusta el padding del header si es necesario */
+    margin-bottom: 10px 0; /* Ajusta el padding del header si es necesario */
 }
 
 /* Navbar */

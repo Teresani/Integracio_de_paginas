@@ -1,50 +1,50 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turnero</title>
-    <link rel="stylesheet" href="Syles/styleTurnero.css">
-    <link rel="stylesheet" href="footer/footer.css"> <!-- Esto Es Del Footer-->
-    <link rel="stylesheet" href="header/header.css"> <!-- Esto Es Del Header-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="header/header.css"> <!-- Esto Es Del Header-->
+        <link rel="stylesheet" href="footer/footer.css"> <!-- Esto Es Del Footer-->
+        <link rel="stylesheet" href="Syles/styleTurnero.css">
+    </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg custom-navbar">
-            <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">
-                    <img src="header/Img_Header/LogoHospital.png" alt="LogoHospital">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true"></a>
-                        </li>
-                    </ul>
-                    <form class="d-flex mx-auto search-form" role="search">
-                        <div class="input-group">
-                            <div class="relative-container">
-                                <input class="form-control search-input" type="search" placeholder="Buscar..." aria-label="Buscar">
-                                <span class="input-group-text">
-                                    <img src="header/Img_Header/Lupita.png" alt="Buscar" height="20px">
-                                </span>
-                            </div>
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">
+                <img src="header/Img_Header/LogoHospital.png" alt="LogoHospital">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true"></a>
+                    </li>
+                </ul>
+                <form class="d-flex mx-auto search-form" role="search">
+                    <div class="input-group">
+                        <div class="relative-container">
+                            <input class="form-control search-input" type="search" placeholder="Buscar..." aria-label="Buscar">
+                            <span class="input-group-text">
+                                <img src="header/Img_Header/Lupita.png" alt="Buscar" height="20px">
+                            </span>
                         </div>
-                    </form>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="btn btn-transparent d-flex align-items-center" href="login.html">
-                                INGRESAR
-                                <img src="header/Img_Header/Usuario.png" alt="Ingresar" height="20px" class="ms-2">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                    </div>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="btn btn-transparent d-flex align-items-center" href="login.html">
+                            INGRESAR
+                            <img src="header/Img_Header/Usuario.png" alt="Ingresar" height="20px" class="ms-2">
+                        </a>
+                    </li>
+                </ul>
             </div>
+        </div>
         </nav>
         <!-- Botones separados debajo del nav -->
         <div class="BotonesNavbar">
@@ -54,48 +54,41 @@
         </div>
     </header>
 
+    <br>
+
     <main>
-            <div class="turnero-box">
-                <h2>Turnero</h2>
-                <form>
-                    
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        <div class="turnero-box">
+            <h2>Turnero</h2>
+            <form>
+                
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
 
-                    <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
 
-                    <label for="dni">DNI/CUIL</label>
-                    <input type="text" id="dni" name="dni" placeholder="DNI/CUIL" required>
+                <label for="dni">DNI/CUIL</label>
+                <input type="text" id="dni" name="dni" placeholder="DNI/CUIL" required>
 
-                    <label for="mail">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Email" required>
+                <label for="mail">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
 
-                    <label for="especialidad">Especialidad</label>
-                    <input type="text" id="especialidad" name="especialidad" placeholder="Especialidad" required>
+                <label for="especialidad">Especialidad</label>
+                <input type="text" id="especialidad" name="especialidad" placeholder="Especialidad" required>
 
-                    <label for="especialista">Especialista</label>
-                    <input type="text" id="especialista" name="especialista" placeholder="Especialista" required>
-                    
-                    <label for="fecha">Fecha</label>
-                    <input type="date" id="fecha" name="fecha" required>
-                    
-                    <label for="hora">Hora</label>
-                    <input type="time" id="hora" name="hora" required>
-                    
-                    <button type="submit">Agendar</button>
-                </form>
-            </div>
+                <label for="especialista">Especialista</label>
+                <input type="text" id="especialista" name="especialista" placeholder="Especialista" required>
+                
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha" name="fecha" required>
+                
+                <label for="hora">Hora</label>
+                <input type="time" id="hora" name="hora" required>
+                
+                <button type="submit">Agendar</button>
+            </form>
+        </div>
     </main>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
     <footer><!-- Digamos que este footer ya esta bastante bien :)-->
         <div class="footer-contact">
@@ -144,8 +137,12 @@
             <img src="Img/logo_proa.png" alt="Programa Logo">
         </div>
     </footer>
+
+
     <script src="Scripts/scriptTurnero.js"></script>
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 </body>
 </html>
