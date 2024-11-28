@@ -1,229 +1,162 @@
-*   {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Poppins, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    
-}
-
-main::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, #e0e4e4c9, #709ba3);
-}
-
+/* Estilos generales (mobile first) */
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    width: 100%;
-    
-}
-
-main{
-    background: linear-gradient(to bottom, #e0e4e4c9, #709ba3);
-
-    padding-top: 50px;
-    margin: 0;
-    position: relative;
-    width: 100%;
-    min-height: calc(100vh - 160px);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-image: url(https://cadenacentro.com/wp-content/uploads/2021/11/f800x450-186650_238096_5050.jpg);
-    z-index: 2;
-}
-
-
-
-
-/*              Responsive                     */
-@media (max-width: 768px){
-    main {
-        min-height: calc(100vh - 120px); /* Ajusta si el header o footer es más pequeño en móviles */
-        background-size: cover;
-        background-repeat: repeat-y;
-    }
-    
-}
-@media (min-width: 769px) {
-    main {
-        min-height: calc(100vh - 160px); /* Ajusta si el header o footer es más pequeño en pantallas más grandes */
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-}
-.container {
-    margin-top: 5%;
-    margin-bottom: 10%;
-    position: relative;
-    top: 23px;
-    left: -10px;
-    background-color: whitesmoke;
-    object-position: center;
-    width: 600px;
-    height: 100px;
-    border-radius: 30px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-    align-items: center;
-    border-color: #c2f8fa;
-    border: 10px;
-    font-size: 13px;
-}
-
-
-/*          En que afecta esto?
-    .bar {
-        position: relative;
-        top: 50px;
-        left: 90px;
-        
-    }
-    .barrita {
-        width: 300px;
-        height: 25px;
-        border-radius: 20px;
-    }
-
-    .botonbuscar {
-        width: 100px;
-        height: 25px;
-        border-radius: 10px;
-        background: #c2f8fa;
-        color: rgb(0, 0, 0);
-    }
-
-    .search-bar {
-        position: relative;
-        top: 25px;
-        left: 210px;
-        display: flex;
-        align-items: center;
-    }
-
-    .search-bar input[type="text"] {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 40px;
-        margin-right: 8px;
-        width: 320px;
-        font-size: 14px;
-    }
-
-    .search-bar button {
-        padding: 8px 12px;
-        background-color: #171717;
-        color: #fff;
-        border: none;
-        border-radius: 40px;
-        width: 100px;
-        height: 30px;
-        font-size: 14px;
-        cursor: pointer;
-    }
-
-    .botonbuscar:hover {
-        background-color:#003264;
-        color: #000000;
-    }
-
-    form{
-        display: grid;
-        background-color: whitesmoke;
-        border-radius: 10px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3,1fr);
-    }
-
-
-    .fondo-turno{
-        margin-left: 5%;
-    }
-*/
-
-p{
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-h1{
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-h2{
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-li{
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-nav ul {
-    list-style: none;
     padding: 0;
+    box-sizing: border-box;
 }
 
-nav ul li {
-    display: inline;
+/* Header */
+header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #333;
+    color: #fff;
 }
 
-nav ul li a {
+.navbar-brand img {
+    width: 150px; /* Logo ajustable */
+}
+
+.BotonesNavbar button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #444;
     color: white;
-    text-decoration: none;
+    border: none;
+    cursor: pointer;
 }
 
+.BotonesNavbar button:hover {
+    background-color: #555;
+}
+
+/* Main */
 main {
-    padding: 1em;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-section {
-    background-color: white;
-    margin: 1em 0;
-    padding: 1em;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-main::before {
-    content: "";
-    position: absolute;
-    background: linear-gradient(to bottom, #e0e4e4c9, #709ba3);
-}
-.servicios{
-    padding-top: 50px;
-    margin: 0;
-    position: relative;
+.main-section {
     width: 100%;
-    min-height: calc(100vh - 160px);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-image: url(../Img/Fondo.jpg);
-    z-index: 2;
+    max-width: 500px;
+    margin: 10px 0;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-.HML{
-    padding-top: 100px;
-    text-align: center;
-    color: blue
+.main-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Media query para dispositivos con pantallas de al menos 600px (tabletas y teléfonos grandes) */
+@media screen and (min-width: 600px) {
+
+    /* Ajustar la visualización de botones de navegación */
+    .BotonesNavbar button {
+        font-size: 16px; /* Botones más grandes en pantallas medianas */
+    }
+
+    /* Ajustar el header */
+    header {
+        padding: 15px 30px;
+    }
+
+    .navbar-brand img {
+        width: 180px;
+    }
+
+    /* Ajustar el main */
+    main {
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .main-section {
+        width: 48%; /* Dos secciones por fila */
+        margin: 10px;
+    }
+
+    /* Ajuste para imágenes dentro del main */
+    .main-section img {
+        width: 100%;
+    }
+}
+
+/* Media query para pantallas más grandes (PC, de 1024px en adelante) */
+@media screen and (min-width: 1024px) {
+
+    /* Header ajustado para pantallas grandes */
+    header {
+        padding: 20px 40px;
+        justify-content: space-between;
+    }
+
+    .navbar-brand img {
+        width: 200px; /* Logo más grande */
+    }
+
+    /* Botones de navegación más grandes en pantallas grandes */
+    .BotonesNavbar button {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+
+    /* Main */
+    main {
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .main-section {
+        width: 30%; /* Tres secciones por fila */
+        margin: 20px;
+    }
+
+    /* Ajuste de imágenes dentro del main */
+    .main-section img {
+        width: 100%;
+    }
+}
+
+/* Ajustes especiales para pantallas de muy alta resolución (por ejemplo, monitores 4K) */
+@media screen and (min-width: 1440px) {
+
+    /* Ajustar más el header */
+    header {
+        padding: 30px 50px;
+    }
+
+    .navbar-brand img {
+        width: 220px;
+    }
+
+    /* Ajustar el main */
+    main {
+        padding: 60px;
+    }
+
+    .main-section {
+        width: 22%; /* Cuatro secciones por fila */
+    }
+
+    .BotonesNavbar button {
+        font-size: 20px;
+        padding: 14px 28px;
+    }
 }
