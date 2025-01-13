@@ -1,0 +1,221 @@
+/* Estilos generales */
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header fijo */
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    background-color: #bfd2d9; /* Color del header */
+    margin-bottom: 10px 0; /* Ajusta el padding del header si es necesario */
+}
+
+/* Navbar */
+.custom-navbar {
+    background-color: #bfd2d9; /* Color del header */
+}
+
+/* Icono de menú */
+.navbar-toggler {
+    border: none;
+    background: none;
+}
+IconoMenu.png
+.navbar-toggler-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+/* Marca */
+.navbar-brand img {
+    height: 80px;
+}
+
+/* Formulario de búsqueda */
+.search-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; /* Evita que los elementos se muevan a la siguiente línea */
+    padding: 10px;
+}
+
+/* Grupo de entrada */
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    overflow: visible;
+    border-radius: 20px;
+    flex-wrap: nowrap;
+}
+
+.relative-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Entrada de búsqueda */
+.search-input {
+    padding-left: 40px;
+    border-radius: 20px;
+    border: 6px solid #094797;
+    height: 40px;
+    width: 100%;
+}
+
+/* Icono dentro del input */
+.input-group-text {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    z-index: 1;
+}
+
+/* Botón transparente */
+.btn-transparent {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.btn-transparent img {
+    height: 40px;
+    margin-left: 5px;
+}
+
+/* Botones Navbar */
+.BotonesNavbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #003851;
+    padding: 10px 50px;
+    margin-top: 10px;
+}
+
+.BotonesNavbar button {
+    background-color: #003851;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.BotonesNavbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.BotonesNavbar button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* Agregar una gran separación debajo del header */
+body {
+    margin-top: 120px; /* Aumenta el margen para evitar solapamiento */
+}
+
+/* Diseño Responsivo */
+@media (max-width: 992px) {
+    /* Navbar: en pantallas medianas */
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Botón hamburguesa y elementos del navbar */
+    .navbar-nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Ajustar el tamaño de la barra de búsqueda */
+    .input-group {
+        width: 80%; /* Mayor tamaño para pantallas medianas */
+        margin-bottom: 15px;
+    }
+
+    .search-form {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn-transparent {
+        margin-bottom: 20px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .navbar-brand img {
+        height: 60px; /* Reducción del logo */
+    }
+}
+
+/* Sección de contenido principal debajo del header */
+main {
+    margin-top: 150px; /* Añadir un gran espacio debajo del header para dispositivos grandes */
+}
+
+/* Para dispositivos móviles pequeños */
+@media (max-width: 480px) {
+    body {
+        margin-top: 150px; /* Espacio de 150px o más para móviles pequeños */
+    }
+
+    main {
+        margin-top: 160px; /* Asegurar que el contenido no se solape en pantallas pequeñas */
+    }
+
+    .navbar-brand img {
+        height: 50px; /* Reducción del logo en móviles pequeños */
+    }
+
+    .BotonesNavbar {
+        padding: 10px 20px;
+        flex-direction: column; /* Botones apilados en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .BotonesNavbar button {
+        margin: 10px 0;
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .search-form {
+        margin-top: 10px;
+        width: 90%; /* Ajustar el tamaño de la barra de búsqueda */
+    }
+
+    .input-group {
+        width: 100%; /* Mayor ancho para móviles */
+    }
+
+    /* Diseño mejorado de la hamburguesa en pantallas móviles */
+    .navbar-toggler-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
