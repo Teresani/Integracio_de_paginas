@@ -1,50 +1,58 @@
-<footer>  hola2</footer>
-<!--
-<footer>
-    <div class="footer-contact">
-        <h1 id="TituloFooter">Hospital Municipal La Falda</h1>
-        <p>13 de Diciembre 596, La Falda<br>Córdoba, Argentina</p>
-    </div>
-
-    <div class="footer-numbers">
-        <div class="number">
-            <span>📞 103</span>
-            <p>Seguridad</p>
+<footer><!-- Digamos que este footer ya esta bastante bien :)-->
+        <div class="footer-contact">
+            <h1 id="TituloFooter">Hospital Municipal La Falda</h1>
+            <p>13 de Diciembre 596, La Falda<br>Córdoba, Argentina</p>
         </div>
-        <div class="number">
-            <span>📞 107</span>
-            <p>Emergencias</p>
+    
+        <div class="footer-numbers">
+            <div class="number">
+                <span>📞 103</span>
+                <p>Seguridad</p>
+            </div>
+            <div class="number">
+                <span>📞 107</span>
+                <p>Emergencias</p>
+            </div>
+            <div class="number">
+                <span>📞 100</span>
+                <p>Bomberos</p>
+            </div>
+            <div class="number">
+                <span>📞 101</span>
+                <p>Policía</p>
+            </div>
         </div>
-        <div class="number">
-            <span>📞 100</span>
-            <p>Bomberos</p>
+    
+        <div class="footer-contact-button">
+            <button id="ContactoBoton">Contacto y Servicio</button>
+            <div class="social-icons">
+                <a href="paginaEnProceso.html" class="social-icon" target="_blank">
+                    <img src="footer/Img Footer/faceLogo.png" alt="Facebook" />
+                </a>
+                <a href="paginaEnProceso.html" class="social-icon" target="_blank">
+                    <img src="footer/Img Footer/Twitter-Logo.png" alt="Twitter" />
+                </a>
+                <a href="paginaEnProceso.html" class="social-icon" target="_blank">
+                    <img src="footer/Img Footer/instaLogo.png" alt="Instagram" />
+                </a>
+            </div>
         </div>
-        <div class="number">
-            <span>📞 101</span>
-            <p>Policía</p>
+    
+        <div class="footer-bottom">
+            <img src="footer/Img Footer/LogoJefaturaGabinete.png" alt="La Falda Logo">
+            <p>Creado por 5to año PRoA La Falda - © 2024</p>
+            <img src="footer/Img Footer/LOGO-LA-FALDA.png" alt="Logo La falda">
+            <img src="Img/logo_proa.png" alt="Programa Logo">
         </div>
-    </div>
-
-    <div class="footer-contact-button">
-        <button id="ContactoBoton">Contacto y Servicio</button>
-        <div class="social-icons">
-            <a href="paginaEnProceso.html" class="social-icon">
-                <img src="footer/Img Footer/faceLogo.png" alt="Facebook" />
-            </a>
-            <a href="paginaEnProceso.html" class="social-icon">
-                <img src="footer/Img Footer/Twitter-Logo.png" alt="Twitter" />
-            </a>
-            <a href="paginaEnProceso.html" class="social-icon">
-                <img src="footer/Img Footer/instaLogo.png" alt="Instagram" />
-            </a>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <img src="footer/Img Footer/LogoJefaturaGabinete.png" alt="La Falda Logo">
-        <p>Creado por 5to año PRoA La Falda - © 2024</p>
-        <img src="footer/Img Footer/LOGO-LA-FALDA.png" alt="Logo La falda">
-        <img src="Img/logo_proa.png" alt="Programa Logo">
-    </div>
 </footer>
--->
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Botón de iniciar sesión
+            const boton = document.querySelector("#ContactoBoton");
+            if (boton) {
+                boton.addEventListener("click", () => {
+                    window.location.href = "paginaEnProceso.html";
+                });
+            }
+        });
+</script>

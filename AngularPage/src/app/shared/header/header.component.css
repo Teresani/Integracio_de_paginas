@@ -28,8 +28,9 @@ header {
     border: none;
     background: none;
 }
-IconoMenu.png
+Img_Header/IconoMenu.png
 .navbar-toggler-icon {
+    background-image: url('Img_Header/IconoMenu.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 30px;
