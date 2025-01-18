@@ -1,16 +1,19 @@
+/* Header fijo */
 header {
     top: 0;
     position: fixed;
     width: 100%;
     z-index: 3;
-    background-color: #bfd2d9;
-    margin-bottom: 10px 0;
+    background-color: #bfd2d9; /* Color del header */
+    margin-bottom: 10px 0; /* Ajusta el padding del header si es necesario */
 }
 
+/* Navbar */
 .custom-navbar {
-    background-color: #bfd2d9;
+    background-color: #bfd2d9; /* Color del header */
 }
 
+/* Icono de menú */
 .navbar-toggler {
     border: none;
     background: none;
@@ -24,18 +27,21 @@ header {
     background-image: url("https://github.com/Teresani/Integracio_de_paginas/blob/main/AngularPage/public/HeaderMenu.png");
 }
 
+/* Marca */
 .navbar-brand img {
     height: 80px;
 }
 
+/* Formulario de búsqueda */
 .search-form {
     width: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /* Evita que los elementos se muevan a la siguiente línea */
     padding: 10px;
 }
 
+/* Grupo de entrada */
 .input-group {
     display: flex;
     align-items: center;
@@ -50,6 +56,7 @@ header {
     width: 100%;
 }
 
+/* Entrada de búsqueda */
 .search-input {
     padding-left: 40px;
     border-radius: 20px;
@@ -58,6 +65,7 @@ header {
     width: 100%;
 }
 
+/* Icono dentro del input */
 .input-group-text {
     position: absolute;
     left: 10px;
@@ -68,6 +76,7 @@ header {
     z-index: 1;
 }
 
+/* Botón transparente */
 .btn-transparent {
     background: transparent;
     border: none;
@@ -80,6 +89,7 @@ header {
     margin-left: 5px;
 }
 
+/* Botones Navbar */
 .BotonesNavbar {
     display: flex;
     justify-content: space-between;
@@ -109,11 +119,14 @@ header {
     text-align: center;
 }
 
+/* Agregar una gran separación debajo del header */
 body {
-    margin-top: 120px;
+    margin-top: 120px; /* Aumenta el margen para evitar solapamiento */
 }
 
+/* Diseño Responsivo */
 @media (max-width: 992px) {
+    /* Navbar: en pantallas medianas */
     .navbar-collapse {
         display: flex;
         flex-direction: column;
@@ -122,14 +135,16 @@ body {
         width: 100%;
     }
 
+    /* Botón hamburguesa y elementos del navbar */
     .navbar-nav {
         width: 100%;
         display: flex;
         justify-content: center;
     }
 
+    /* Ajustar el tamaño de la barra de búsqueda */
     .input-group {
-        width: 80%;
+        width: 80%; /* Mayor tamaño para pantallas medianas */
         margin-bottom: 15px;
     }
 
@@ -145,30 +160,32 @@ body {
     }
 
     .navbar-brand img {
-        height: 60px;
+        height: 60px; /* Reducción del logo */
     }
 }
 
+/* Sección de contenido principal debajo del header */
 main {
-    margin-top: 150px;
+    margin-top: 150px; /* Añadir un gran espacio debajo del header para dispositivos grandes */
 }
 
+/* Para dispositivos móviles pequeños */
 @media (max-width: 480px) {
     body {
-        margin-top: 150px;
+        margin-top: 150px; /* Espacio de 150px o más para móviles pequeños */
     }
 
     main {
-        margin-top: 160px;
+        margin-top: 160px; /* Asegurar que el contenido no se solape en pantallas pequeñas */
     }
 
     .navbar-brand img {
-        height: 50px;
+        height: 50px; /* Reducción del logo en móviles pequeños */
     }
 
     .BotonesNavbar {
         padding: 10px 20px;
-        flex-direction: column;
+        flex-direction: column; /* Botones apilados en pantallas pequeñas */
         align-items: center;
     }
 
@@ -180,13 +197,14 @@ main {
 
     .search-form {
         margin-top: 10px;
-        width: 90%;
+        width: 90%; /* Ajustar el tamaño de la barra de búsqueda */
     }
 
     .input-group {
-        width: 100%;
+        width: 100%; /* Mayor ancho para móviles */
     }
 
+    /* Diseño mejorado de la hamburguesa en pantallas móviles */
     .navbar-toggler-icon {
         width: 40px;
         height: 40px;
