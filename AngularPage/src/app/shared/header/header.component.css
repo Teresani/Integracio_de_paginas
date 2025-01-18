@@ -1,13 +1,3 @@
-/* Estilos generales */
-* {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Header fijo */
 header {
     top: 0;
@@ -28,13 +18,13 @@ header {
     border: none;
     background: none;
 }
-Img_Header/IconoMenu.png
+
 .navbar-toggler-icon {
-    background-image: url('Img_Header/IconoMenu.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 30px;
     height: 30px;
+    background-image: url(https://github.com/Teresani/Integracio_de_paginas/blob/main/AngularPage/public/HeaderMenu.png);
 }
 
 /* Marca */
